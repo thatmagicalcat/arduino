@@ -1,0 +1,8 @@
+[build]
+target = "atmega328p.json"
+
+[unstable]
+build-std = ["core"]
+
+[target.'cfg(target_arch = "avr")']
+runner = "ravedude uno --open-console --baudrate 57600 --port /dev/ttyUSB0"
